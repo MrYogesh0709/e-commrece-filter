@@ -2,8 +2,12 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDown, FunnelIcon } from "./Icon";
 import SortOptions from "./SortOptions";
+import useSideBarStore from "../store/useSidebarStore";
 
 const Sort = () => {
+  const setMobileFiltersOpen = useSideBarStore(
+    (state) => state.setMobileFiltersOpen
+  );
   return (
     <div className="flex items-center justify-between border-b border-gray-200 py-2">
       <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-200">
@@ -40,7 +44,7 @@ const Sort = () => {
         <button
           type="button"
           className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
-          //   onClick={() => setMobileFiltersOpen(true)}
+          onClick={() => setMobileFiltersOpen(true)}
         >
           <span className="sr-only">Filters</span>
           <FunnelIcon />

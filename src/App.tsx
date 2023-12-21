@@ -3,6 +3,8 @@ import ProductsList from "./components/ProductsList";
 import SearchBar from "./components/SearchBar";
 import Sort from "./components/Sort";
 import github from "./assets/github.svg";
+import MobileFilter from "./components/MobileFilter";
+import { useState } from "react";
 function App() {
   return (
     <main className="min-h-screen max-w-screen-xl mx-auto px-4">
@@ -13,6 +15,7 @@ function App() {
       <SearchBar />
       <Sort />
       <div className="h-[2px] bg-slate-700 dark:bg-slate-200 w-full mx-auto mb-2"></div>
+      <MobileFilter />
       <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
         <div className="lg:block hidden">
           <Filter />
