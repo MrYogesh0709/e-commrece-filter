@@ -2,7 +2,7 @@ import Filter from "./components/Filter";
 import ProductsList from "./components/ProductsList";
 import SearchBar from "./components/SearchBar";
 import Sort from "./components/Sort";
-
+import github from "./assets/github.svg";
 function App() {
   return (
     <main className="min-h-screen max-w-screen-xl mx-auto px-4">
@@ -19,6 +19,14 @@ function App() {
         </div>
         <ProductsList />
       </div>
+      <a
+        href="https://github.com/MrYogesh0709/e-commrece-filter"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-8 right-8 text-slate-80"
+      >
+        <img src={github} alt="github" className="github" />
+      </a>
     </main>
   );
 }
