@@ -4,7 +4,6 @@ import SearchBar from "./components/SearchBar";
 import Sort from "./components/Sort";
 import github from "./assets/github.svg";
 import MobileFilter from "./components/MobileFilter";
-import { useState } from "react";
 function App() {
   return (
     <main className="min-h-screen max-w-screen-xl mx-auto px-4">
