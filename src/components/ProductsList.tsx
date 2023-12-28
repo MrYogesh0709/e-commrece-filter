@@ -1,11 +1,9 @@
-import useProductStore from "../store/useProductStore";
 import Product from "./Product";
 import useGetProducts from "../hook/getProducts";
 import Loading from "./Loading";
+
 const ProductsList = () => {
-  useGetProducts(); //custom hook
-  const products = useProductStore((state) => state.products);
-  const loading = useProductStore((state) => state.loading);
+  const [products, loading] = useGetProducts(); //custom hook
 
   return (
     <div className="lg:col-span-3">

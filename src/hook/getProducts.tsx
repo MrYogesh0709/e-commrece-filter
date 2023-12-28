@@ -2,8 +2,11 @@ import { useEffect } from "react";
 import useProductStore from "../store/useProductStore";
 
 const useGetProducts = () => {
+  const loading = useProductStore((state) => state.loading);
+  const products = useProductStore((state) => state.products);
   const setProducts = useProductStore((state) => state.setProducts);
   const setLoading = useProductStore((state) => state.setLoading);
+
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
@@ -19,6 +22,7 @@ const useGetProducts = () => {
     };
     getData();
   }, [setProducts, setLoading]);
+  return [products, loading] as const;
 };
 
 export default useGetProducts;
